@@ -16,9 +16,14 @@ class DefaultController extends Controller
         $conn = $this->get('database_connection');
         $entries = $conn->fetchAll('SELECT * FROM blog');
 
-        return $this->render(
+        $response =  $this->render(
             'ExampleBlogBundle:Default:index.html.php',
             array('entries' => $entries, 'page'=>$page)
         );
+
+        //caching
+        $response->setPublic();
+        
+        return $response;
     }
 }
