@@ -1,0 +1,3 @@
+ExampleBlogBundle_homepage:
+    pattern:  /blog/{page}
+    defaults: { _controller: ExampleBlogBundle:Default:index, page:0 }
