@@ -9,37 +9,39 @@ Server Software:        Apache/2.2.22
 Server Hostname:        symfony.dev
 Server Port:            80
 
-Document Path:          /
-Document Length:        553 bytes
+Document Path:          /blog
+Document Length:        3344 bytes
 
 Concurrency Level:      5
-Time taken for tests:   13.142 seconds
+Time taken for tests:   11.991 seconds
 Complete requests:      1000
 Failed requests:        0
 Write errors:           0
-Non-2xx responses:      1000
-Total transferred:      837000 bytes
-HTML transferred:       553000 bytes
-Requests per second:    76.09 [#/sec] (mean)
-Time per request:       65.712 [ms] (mean)
-Time per request:       13.142 [ms] (mean, across all concurrent requests)
-Transfer rate:          62.19 [Kbytes/sec] received
+Total transferred:      3622000 bytes
+HTML transferred:       3344000 bytes
+Requests per second:    83.39 [#/sec] (mean)
+Time per request:       59.957 [ms] (mean)
+Time per request:       11.991 [ms] (mean, across all concurrent requests)
+Transfer rate:          294.97 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
 Connect:        0    0   0.1      0       1
-Processing:    16   66  86.1     53    1886
-Waiting:       12   58  86.7     46    1884
-Total:         16   66  86.1     53    1886
+Processing:     9   60  16.8     56     164
+Waiting:        9   52  17.8     49     156
+Total:          9   60  16.8     56     164
 
 Percentage of the requests served within a certain time (ms)
-  50%     53
-  66%     58
-  75%     62
-  80%     66
-  90%     87
-  95%    110
-  98%    151
-  99%    173
- 100%   1886 (longest request)
+  50%     56
+  66%     61
+  75%     64
+  80%     68
+  90%     82
+  95%     98
+  98%    111
+  99%    116
+ 100%    164 (longest request)
+
 ```
+
+Note: When concurrency increases RPS decreases. I think Symfony uses quite a lot of memory per-request.
